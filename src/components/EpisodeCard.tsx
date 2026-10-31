@@ -24,19 +24,19 @@ export default function EpisodeCard({ episode, index, className = '' }: { episod
               <span className="rounded bg-black/50 px-2 py-0.5 text-[10px] font-bold tracking-[0.2em] text-bone backdrop-blur">{season}</span>
               <span className="text-[10px] font-bold tracking-[0.2em] text-bone/80">EPISODE {ep.replace('E', '')}</span>
             </div>
-            <h4 className="absolute bottom-4 left-4 right-4 font-display text-3xl leading-none tracking-wide text-bone [transform:translateZ(30px)] sm:text-4xl">{episode.title}</h4>
+            <h4 className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 font-display text-2xl leading-none tracking-wide text-bone [transform:translateZ(30px)] sm:text-4xl">{episode.title}</h4>
           </div>
-          <div className="flex flex-1 flex-col p-4">
-            <div className="mb-2 flex items-center justify-between text-[11px] text-smoke">
+          <div className="flex flex-1 flex-col p-3 sm:p-4">
+            <div className="mb-1.5 sm:mb-2 flex items-center justify-between text-[10px] sm:text-[11px] text-smoke">
               <span className="font-semibold text-mist">{episode.runtime}</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-[10px] text-bone transition group-hover:border-bone group-hover:bg-bone group-hover:text-ink">
+              <span className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full border border-white/20 text-[9px] sm:text-[10px] text-bone transition group-hover:border-bone group-hover:bg-bone group-hover:text-ink">
                 ▶
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-bone/80">{episode.description}</p>
-            <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
+            <p className="text-xs sm:text-sm leading-relaxed text-bone/80 line-clamp-2 sm:line-clamp-3">{episode.description}</p>
+            <div className="mt-auto flex flex-wrap gap-1 sm:gap-1.5 pt-2 sm:pt-4">
               {episode.tags.map((t) => (
-                <span key={t} className="rounded-full bg-white/[0.06] px-2.5 py-1 text-[11px] text-mist">
+                <span key={t} className="rounded-full bg-white/[0.06] px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] sm:text-[11px] text-mist">
                   {t}
                 </span>
               ))}
